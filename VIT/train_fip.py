@@ -276,6 +276,7 @@ def train(args, model):
     plt.title("Accuracy plot")
     plt.xlabel("Epochs")
     plt.ylabel("Accuracy")
+    plt.legend()
     plt.savefig(os.path.join(args.output_dir, "accuracy_plot.png"))
 
 def main():
