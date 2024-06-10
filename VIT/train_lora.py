@@ -311,17 +311,12 @@ def main():
                         help="Step of training to perform learning rate warmup for.")
     parser.add_argument("--max_grad_norm", default=1.0, type=float,
                         help="Max gradient norm.")
-
     parser.add_argument("--local_rank", type=int, default=-1,
                         help="local_rank for distributed training on gpus")
     parser.add_argument('--seed', type=int, default=42,
                         help="random seed for initialization")
     parser.add_argument('--gradient_accumulation_steps', type=int, default=1,
                         help="Number of updates steps to accumulate before performing a backward/update pass.")
-    parser.add_argument('--loss_scale', type=float, default=0,
-                        help="Loss scaling to improve fp16 numeric stability. Only used when fp16 set to True.\n"
-                             "0 (default value): dynamic loss scaling.\n"
-                             "Positive power of 2: static loss scaling value.\n")
     parser.add_argument('--checkpoint', action='store_true',
                     help="Whether to use custom pre-trained model or imagenet21k pretrained")
     parser.add_argument('--use_lora', action='store_true',
@@ -346,8 +341,8 @@ def main():
     logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
                         datefmt='%m/%d/%Y %H:%M:%S',
                         level=logging.INFO if args.local_rank in [-1, 0] else logging.WARN)
-    logger.warning("Process rank: %s, device: %s, n_gpu: %s, distributed training: %s, 16-bits training: %s" %
-                   (args.local_rank, args.device, args.n_gpu, bool(args.local_rank != -1), args.fp16))
+    logger.warning("Process rank: %s, device: %s, n_gpu: %s, distributed training: %s" %
+                   (args.local_rank, args.device, args.n_gpu, bool(args.local_rank != -1)))
 
     # Set seed
     set_seed(args)
