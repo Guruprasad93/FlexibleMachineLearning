@@ -11,7 +11,7 @@ This repository contains the codebase and sample notebooks to run the scripts. P
 `FIP_VIT.ipynb`: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1UICCGijTeugrhhRSL4PQ0GOBM_mHcC70?usp=sharing): 
 In this Google Colab notebook, we will be running the continual learning script to learn new tasks with the reduction of catastrophic forgetting of the previous learnt tasks using FIP.
 
-`LoRA_VIT.ipynb`: [![Open in Google Colab](https://colab.research.google.com/drive/1IfQzwpYOh6Lr6fbljIXxpfxjhP6qQRkC?usp=sharing): 
+`LoRA_VIT.ipynb`: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IfQzwpYOh6Lr6fbljIXxpfxjhP6qQRkC?usp=sharing): 
 In this Google Colab notebook, we will be running the continual learning script to learn new tasks using LoRA adapter.
 
 ---
